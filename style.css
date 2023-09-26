@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
     /* background-color: #00132B; */
     color: white;
     padding: 0px;
     margin: 0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family:'Montserrat';
     text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -112,22 +114,31 @@ svg{
 }
 
 .btn{
-    margin: 1svw;
+    
     background: none;
-    text-align: right;
+    text-align: left;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    place-items: center;
+    gap: .5vw;
 }
 
+.btn p{
+    padding: 1vw;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+
+
 .btn h3{
-    padding: 2vw;
+    
     width: max-content;
-    margin: 2vw 2vw;
-    color: #000000;
+    
+    /* color: #000000; */
     font-weight: 700;
     border-spacing: 2px;
     line-height: 2vw;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     font-size: 4vw;
 }
@@ -148,7 +159,7 @@ svg{
 
 .about h3{
     background: none;
-    color: rgb(66, 198, 242);
+    color: #0050b1;
     text-align: center;
     font-size: 1.5vw;
     margin: 1vw;
@@ -170,7 +181,7 @@ h3 a{
 
 .count-mission-vission{
     background: none; 
-    margin: 2vw 0vw;
+    margin: 1vw 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
@@ -199,18 +210,20 @@ h3 a{
     background: none;
     color: #00132B;
     place-items: center;
+    font-size: 2vw;
 }
 
 
 .mission-vision{
     background: none ;
+
 }
 
 .mission-vision h2{
     color: #00132B;
     background: none;
     margin: 1vw;
-    
+    text-align: center;
 }
 .mission-vision p{
     text-align: left;
@@ -225,21 +238,20 @@ h3 a{
 }
 
 .swiper{
-    padding: 4vw;
+    padding: 4vw 7vw;
 }
 
 .card{
     display: grid;
     grid-template-rows: 2fr .7fr;
     overflow: hidden;
-    margin: 3vw ;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
     color: #00132B;
     border-radius: 10px;
     transition: .5s ease-in-out;
-    width: 300px;
-    
+    width: 250px;
+    height: 350px;
 }
 
 .card:hover{
@@ -247,27 +259,37 @@ h3 a{
 
 }
 
-.des{
+/* .des{
     overflow: hidden;
-    display: grid;
-    grid-template-rows: .3fr .5fr;
-}
+    display: flex;
+    justify-content: center;
+} */
 
 .des h4{
-    margin: .5vw;
-    padding: .5vw;
+    /* margin: .5vw 2vw; */
+    /* padding: .5vw;
     width: max-content;
     background-color: #00d5ff;
+    text-align: left;
     border-radius: 5px;
     color: #00132B;
     font-weight: 900 !important ;
+    font-size: 1vw ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black ;
+    font-size: 2vw;
+    font-weight: 800;
 }
 
-.des h1{
+/* .des h1{
     color: #00132B;
     border-top: 2px solid darkgray;
-    margin: .6vw;
-}
+    margin:.3vw 2vw;
+    font-size: 2vw;
+    font-weight: 800;
+} */
 
 
 swiper-slide {
@@ -291,29 +313,41 @@ swiper-slide {
 .blog-head{
     font-size: 3vw;
     color: black;
-    margin: 2vw;
+    margin: 4vw 2vw;
 }
 
 .blogs{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 0vw 12vw;
+    margin: 3vw 0vw;
 }
 
 .blogs img{
     border-radius: 10px;
 }
 .blog{
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: 1.2fr 3fr;
+    place-items: center;
     gap: 3vw;
     margin: 1vw;
 }
 
-.blogs h1,p{
+.blogs h1{
     color: black;
     margin: .5vw 0vw;
+    font-size: 2vw;
 }
+
+.blog p{
+    color: black;
+    margin: 4vw;
+    font-size: 1.5vw;
+    
+}
+
 
 .text-center p{
     justify-content: center;
@@ -404,7 +438,7 @@ i{
 }
 
 section, footer {
-    background: #1A1E25;
+    background: #00132B;
     color: #868c96;
 }
 
@@ -615,6 +649,32 @@ footer img {
     .about p{
         font-size: 4vw;
     }
+
+    .blogs{
+        gap: 1rem;
+        margin: 5vw;
+    }
+
+    .blog{
+        display: flex;
+        flex-direction: column;
+        text-align: center ;
+    }
+
+    .blog img{
+        width: 30vw;
+    }
+
+    .blog h1{
+        font-size: 3.5vw;
+    }
+
+    .blog p{
+        color: black;
+        margin: .5vw 0vw;
+        font-size: 2vw;
+    }
+    
 
 }
 
