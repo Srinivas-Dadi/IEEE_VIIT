@@ -120,21 +120,21 @@
 
         <div class="count-mission-vission">
             <div class="count">
-                <div class="count-num">
-                    <h1 id="value">
+                <div class="count-num" >
+                    <h1 class="value" data-target="100">
                     </h1>
                     <h4>MEMBERS</h4>
                 </div>
                 <div class="count-num">
-                    <h1 id="value1">10</h1>
+                    <h1 class="value" data-target="10">10</h1>
                     <h4>EVENTS</h4>
                 </div>
-                <div class="count-num">
-                    <h1 id="value2">10</h1>
+                <div class="count-num" >
+                    <h1 class="value" data-target="10">10</h1>
                     <h4>MENTORS</h4>
                 </div>
-                <div class="count-num">
-                    <h1 id="value3">5</h1>
+                <div class="count-num" >
+                    <h1 class="value" data-target="5">5</h1>
                     <h4>COLABS</h4>
                 </div>
             </div>
@@ -332,6 +332,26 @@
             clickable: true,
         },
     });
+    
+const countMissionVissionElement = document.querySelector('.count-mission-vission');
+
+// Create a new IntersectionObserver instance.
+const observer = new IntersectionObserver((entries) => {
+  // Check if the countMissionVissionElement is now visible in the browser viewport.
+  if (entries[0].isIntersecting) {
+    // Iterate over the count elements and call the animateValue() function for each one.
+    const countElements = countMissionVissionElement.querySelectorAll('.value');
+    countElements.forEach((countElement) => {
+      animateValue(countElement, 0, countElement.dataset.target, 1000);
+    });
+  }
+});
+
+// Observe the countMissionVissionElement.
+observer.observe(countMissionVissionElement);
+
+
+// Observe the countMissionVissionElement.
 
 
     function animateValue(obj, start, end, duration) {

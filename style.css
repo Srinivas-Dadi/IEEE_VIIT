@@ -204,6 +204,7 @@ h3 a{
     border-style: dashed;
     justify-content: center;
     place-items: center;
+    color: #00132B;
 }
 
 .count-num h4{
@@ -679,9 +680,6 @@ footer img {
 }
 
 
-@media screen and (max-width: 50px) {
-
-
 
 
 /* 
@@ -737,4 +735,4 @@ footer img {
   }
   
   
-   */ 
+    */ 
