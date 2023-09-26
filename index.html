@@ -18,23 +18,16 @@
             <h1>IEEE VIIT</h1>
         </div>
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Events</a>
-            <a href="#">Blog</a>
+            <a class="navl" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#event">Events</a>
+            <a href="#blogs">Blog</a>
             <a href="#">Join Now</a>
-            <span class="material-symbols-outlined menu" onclick="nav()">menu</span>
+            <span class="material-symbols-outlined menu toggle-btn" onclick="navfun()" >menu</span>
         </div>
     </nav>
-    <div class="mob-nav" id="mn">
-        <a class="moba" href="#">Home</a>
-        <a class="moba1" href="#">About</a>
-        <a class="moba2" href="#">Events</a>
-        <a class="moba4" href="#">Blog</a>
-        <a class="moba3" href="#">Join Now</a>
-    </div>
     <div class="hom-sec">
-        <div class="home">
+        <div class="home" id="home">
             <h2>Advancing Technology<br>for benifit of Humanity</h2>
             <p>IEEE's core purpose is to<br> foster technological innovation & <br> excellence for the benefit of
                 humanity.</p>
@@ -169,7 +162,7 @@
         </div>
       </div> -->
 
-    <div class="events">
+    <div class="events" id="event">
         <center>
             <p >EVENTS</p>
         </center>
@@ -238,7 +231,7 @@
     </div>
 
     <center><h1 class="blog-head">BLOGS</h1></center>
-    <div class="blogs">
+    <div class="blogs" id="blogs">
         <div class="blog">
             <img src="https://images.prismic.io/ieeemuj/a818858f-0d1d-4d80-8ab9-f670da64a668_ElecricCarBlogCover.png?auto=compress,format&rect=0,4,362,209&w=250&h=144" alt="">
             <div class="blog-des">
@@ -375,12 +368,6 @@ observer.observe(countMissionVissionElement);
     animateValue(obj2, 0, 10, 1000);
     animateValue(obj1, 0, 10, 1000);
     animateValue(obj3, 0, 5, 1000);
-
-
-    function nav(){
-        document.getElementsByClassName("mob-nav").style.display = 'contents';
-    }
-        
 
 
 </script>

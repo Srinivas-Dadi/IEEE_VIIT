@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .menu{
     display: flex;
     flex-direction: column;
@@ -26,6 +30,7 @@
 }
 
 nav{
+    
     padding: 1vw;
     display: flex;
     justify-content: space-evenly;
@@ -533,31 +538,22 @@ footer img {
 
 @media screen and (max-width: 650px) {
 
-    .mob-nav{
-        background-color: #00132B;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+    
+    /* .menu{
         display: contents;
+     } */
+
+    .des h4{
+        font-size: 4%;
     }
 
-    .mob-nav a{
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        margin: 1vw 0vw;
+    .logo h1{
         font-size: 3vw;
-        display: contents;
-    }
-
-
-    .menu{
-        display: contents;
     }
 
     .nav-links a{
-        display: none;
-    }
+        font-size: 1.7vw;
+    } 
 
     nav{
         padding: 1vw;
@@ -566,7 +562,6 @@ footer img {
     }
 
     .count{
-        
         justify-content: center;
         align-items: center;
     }
@@ -695,7 +690,6 @@ footer img {
         font-size: 2vw;
     }
     
-
 }
 
 
@@ -754,3 +748,5 @@ footer img {
   
   
    */ 
+
+
